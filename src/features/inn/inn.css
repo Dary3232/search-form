@@ -1,0 +1,107 @@
+.inn-wrap {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 16px;
+  background: #faf5f0;
+  border: 1px solid #f0e7df;
+  border-radius: 12px;
+}
+
+.inn-title {
+  margin-bottom: 16px;
+  color: #5a4f48; 
+  font-weight: 600;
+}
+
+.inn-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.inn-hint {
+  min-height: 20px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #6a5e56;
+}
+.inn-hint-warn {
+  color: #a66a2f;
+}
+
+.inn-input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #e7dcd2;
+  background: #fffaf6;
+  color: #4b403a;
+}
+.inn-input:focus {
+  outline: none;
+  border-color: #d9c7b9;
+  box-shadow: 0 0 0 3px rgba(217, 199, 185, 0.3);
+}
+
+.inn-button {
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #e0cdbf;
+  background: #f0ded1;
+  color: #4b403a;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.inn-button:hover {
+  background: #e8d3c3;
+  border-color: #d7c1b0;
+}
+.inn-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.inn-error {
+  margin-top: 12px;
+  color: #a64040; 
+}
+
+
+.inn-results {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.inn-card {
+  border: 1px solid #efe5dc;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fffdfb;
+}
+
+.inn-card-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #5a4f48;
+}
+
+.inn-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #6a5e56;
+}
+
+.inn-address {
+  margin-top: 6px;
+  color: #6a5e56;
+}
+
+.inn-empty {
+  margin-top: 12px;
+}
+
+
