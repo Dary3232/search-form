@@ -1,16 +1,72 @@
+.site {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.site-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e5eef7;
+}
+.site-header .site-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand-logo {
+  background: #e6f0ff;
+  color: #12325b;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.brand-name { color: #143c6b; font-weight: 600; }
+.nav { display: flex; gap: 16px; }
+.nav-link { color: #345b86; text-decoration: none; }
+.nav-link:hover { text-decoration: underline; }
+
+.site-main { padding: 24px 0 40px; flex: 1; }
+.site-footer {
+  border-top: 1px solid #e5eef7;
+  background: #f7fbff;
+}
+.site-footer .site-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  color: #345b86;
+}
+
 .inn-wrap {
-  max-width: 720px;
-  margin: 40px auto;
+  max-width: 800px;
+  margin: 24px auto;
   padding: 16px;
-  background: #faf5f0;
-  border: 1px solid #f0e7df;
+  background: #ffffff;
+  border: 1px solid #e5eef7;
   border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(12, 69, 128, 0.06);
 }
 
 .inn-title {
   margin-bottom: 16px;
-  color: #5a4f48; 
-  font-weight: 600;
+  color: #143c6b; 
+  font-weight: 700;
 }
 
 .inn-form {
@@ -23,40 +79,50 @@
   min-height: 20px;
   margin-bottom: 8px;
   font-size: 14px;
-  color: #6a5e56;
+  color: #416996;
 }
-.inn-hint-warn {
-  color: #a66a2f;
-}
+.inn-hint-warn { color: #a64545; }
 
 .inn-input {
   flex: 1;
   padding: 10px 12px;
   font-size: 16px;
   border-radius: 8px;
-  border: 1px solid #e7dcd2;
-  background: #fffaf6;
-  color: #4b403a;
+  border: 1px solid #d7e5f7;
+  background: #f9fbfe;
+  color: #12325b;
 }
 .inn-input:focus {
   outline: none;
-  border-color: #d9c7b9;
-  box-shadow: 0 0 0 3px rgba(217, 199, 185, 0.3);
+  border-color: #99c3ff;
+  box-shadow: 0 0 0 3px rgba(153, 195, 255, 0.35);
 }
 
 .inn-button {
   padding: 10px 14px;
   font-size: 16px;
   border-radius: 8px;
-  border: 1px solid #e0cdbf;
-  background: #f0ded1;
-  color: #4b403a;
+  border: 1px solid #9dc2ff;
+  background: linear-gradient(180deg, #e8f1ff 0%, #d7e7ff 100%);
+  color: #10345f;
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 .inn-button:hover {
-  background: #e8d3c3;
-  border-color: #d7c1b0;
+  background: linear-gradient(180deg, #e1ecff 0%, #c9defc 100%);
+  border-color: #8eb7ff;
+}
+.inn-button-primary {
+  background: #1e63d6;
+  border-color: #1e63d6;
+  color: #ffffff;
+}
+.inn-button-primary:hover { background: #1851b1; border-color: #1851b1; }
+.inn-button-ghost-small {
+  background: transparent;
+  border-color: #c9defc;
+  color: #0f3561;
+  padding: 8px 12px;
 }
 .inn-button:disabled {
   opacity: 0.6;
@@ -65,7 +131,7 @@
 
 .inn-error {
   margin-top: 12px;
-  color: #a64040; 
+  color: #a64545; 
 }
 
 
@@ -79,29 +145,149 @@
   border: 1px solid #efe5dc;
   border-radius: 10px;
   padding: 12px;
-  background: #fffdfb;
+  background: #ffffff;
+  border-color: #e5eef7;
+  box-shadow: 0 4px 16px rgba(12, 69, 128, 0.05);
 }
 
+.inn-card-header { display: flex; align-items: flex-start; gap: 8px; justify-content: space-between; }
 .inn-card-title {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 6px;
-  color: #5a4f48;
+  color: #0f3561;
 }
 
-.inn-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  color: #6a5e56;
-}
+.inn-section { margin-top: 8px; }
+.inn-section-title { font-weight: 600; color: #376596; margin-bottom: 6px; }
+.inn-grid { display: flex; flex-direction: column; gap: 8px; }
+.inn-field-pair { display: grid; grid-template-columns: 120px 1fr; gap: 8px; align-items: center; }
+.inn-key { color: #5a7ea8; font-size: 14px; }
+.inn-val { color: #0e2f55; font-weight: 600; }
 
 .inn-address {
   margin-top: 6px;
-  color: #6a5e56;
+  color: #0e2f55;
+}
+
+.inn-address-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .inn-empty {
   margin-top: 12px;
 }
+
+.inn-results-block {
+  margin-top: 16px;
+}
+
+.inn-results-header-block {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.inn-results-header {
+  font-size: 18px;
+  color: #143c6b;
+  font-weight: 600;
+  margin: 0;
+}
+
+.inn-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+/* Status badges */
+.badge { display: inline-flex; align-items: center; padding: 2px 10px; font-size: 12px; border-radius: 999px; border: 1px solid transparent; }
+.badge-status { background: #e9f3ff; border-color: #b2d1ff; color: #0e2f55; }
+.status-active { background: #e6ffef; border-color: #9fe0b7; color: #0e4a2c; font-weight: 700; }
+.status-liquidated { background: #ffeaea; border-color: #ffbcbc; color: #6b1f1f; font-weight: 700; }
+.status-liquidating { background: #fff6e6; border-color: #ffe1b3; color: #6a4a2b; }
+.status-bankrupt { background: #fcecff; border-color: #e9c8ff; color: #5a226b; }
+.status-reorganizing { background: #e7f4ff; border-color: #c7e3ff; color: #0e2f55; }
+
+/* Modal styles */
+.inn-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.inn-modal {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.inn-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #345b86;
+}
+
+.inn-modal h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #143c6b;
+  font-weight: 700;
+}
+
+.inn-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inn-modal-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inn-field-pair {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inn-modal-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.inn-copy-icon {
+  cursor: pointer;
+  color: #345b86;
+  margin-left: 8px;
+}
+
+.inn-copy-icon:hover {
+  color: #1e63d6;
+}
+
 
 
